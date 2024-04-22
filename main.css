@@ -1,0 +1,15 @@
+
+body {
+	background-color:#464e61;
+	color:#292a2e;
+	font-family:Candara,Calibri,Segoe,Segoe UI,Optima,Arial,sans-serif;
+	font-size:22px;
+}
+
+header {
+	display:flex;
+	justify-content:center;
+	background-color:darkgrey;
+}
+
+
