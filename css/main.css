@@ -21,7 +21,7 @@ header h1 {
 #links {
 	display:flex;
 	margin-top:2em;
-	justify-content:space-around;
+	justify-content:center;
 	align-items:center;
 	flex-wrap:wrap;
 	margin-left:3%;
