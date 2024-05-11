@@ -1,11 +1,9 @@
 {
 	"array":
-	{
 		["price_list",
 			[["left","right"],
 			["left2","right2"]],
 		"cargo_list",
 			[["left20","right20"],
 			["left21","right21"]]]
-	}
 }
