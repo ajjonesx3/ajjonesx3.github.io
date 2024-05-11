@@ -1,0 +1,104 @@
+
+%name_price
+
+Subaru Ascent
+Hyundai Santa Fe
+Kia Telluride
+Volkswagen Atlas
+Toyota Highlander
+Honda Pilot
+Dodge Durango
+Honda Passport
+GMC Acadia
+Buick Enclave
+Acura MDX
+Infinity QX60
+Nissan Armada
+GMC Yukon XL
+
+%name_cargo
+
+GMC Yukon XL
+Honda Passport
+GMC Acadia
+Buick Enclave
+Volkswagen Atlas
+Acura MDX
+Nissan Armada
+Kia Telluride
+Honda Pilot
+Dodge Durango
+Toyota Highlander
+Hyundai Santa Fe
+Subaru Ascent
+Infinity QX60
+
+%name_reliability
+
+Kia Telluride
+Buick Enclave
+Honda Passport
+GMC Acadia
+Hyundai Santa Fe
+Subaru Ascent
+Honda Pilot
+GMC Yukon XL
+Toyota Highlander
+Acura MDX
+Nissan Armada
+Infinity QX60
+Volkswagen Atlas
+Dodge Durango
+
+%value_price
+
+$34k to $42k
+$34k to $43k
+$36k to $51k
+$38k to $51k
+$39k to $46k
+$40k to $54k
+$40k to $52k
+$42k to $48k
+$43k to $54k
+$44k to $57k
+$50k to $64k
+$50k to $63k
+$56k to $68k
+$61k to $78k
+
+%value_cargo
+
+42 to 155
+51 to 101
+23 to 98
+24 to 97
+21 to 97
+18 to 95
+17 to 92
+21 to 87
+19 to 87
+17 to 85
+16 to 84
+15 to 80
+18 to 76
+15 to 75
+
+%value_reliability
+
+85
+85
+85
+84
+83
+82
+80
+80
+79
+79
+79
+75
+73
+0
+
+
