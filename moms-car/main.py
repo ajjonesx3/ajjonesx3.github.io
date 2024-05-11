@@ -99,13 +99,35 @@ cars_by_price = sorted(cars,key=lambda x: x.price.low)
 cars_by_cargo = sorted(cars,key=lambda x: x.trunk_space.high,reverse=True)
 cars_by_reliability = sorted(cars,key=lambda x: x.reliability,reverse=True)
 
-def make_entry(left, right):
-    res = "<li><div class=\"entry\"><span class=\"left\">"
-    res += left
-    res += "</span><span class=\"right\">"
-    res += right
-    res += "</span></div></li>"
-    return res
+json_string = "{\n\t\"array\":\n\t\t[";
 
+entry = "[\"price_list\", ["
 for car in cars_by_price:
-    print(make_entry(car.to_string(),car.price.to_string()))
+    entry += "[\"" + car.to_string() + "\",\"" + car.price.to_string() + "\"],"
+entry = entry[:-1] + "]],\n"
+json_string+=entry
+
+entry = "[\"cargo_list\", ["
+for car in cars_by_cargo:
+    entry += "[\"" + car.to_string() + "\",\"" + car.trunk_space.to_string() + "\"],"
+entry = entry[:-1] + "]],\n"
+json_string+=entry
+
+entry = "[\"reliability_list\", ["
+for car in cars_by_reliability:
+    entry += "[\"" + car.to_string() + "\",\"" + str(car.reliability) + "\"],"
+entry = entry[:-1] + "]],\n"
+json_string+=entry
+
+
+
+json_string = json_string[:-2] + "]\n}"
+
+data_file = open("data.json","w")
+data_file.write(json_string)
+data_file.close()
+
+
+
+
+
