@@ -18,7 +18,7 @@ function populate() {
 					left_link.textContent = left;
 
 					let car_name = left.split(" ");
-					left_link.href="https://cars.usnews.com/" + car_name[0].toLowerCase() + "/" + car_name[1].toLowerCase()
+					left_link.href="https://cars.usnews.com/cars-trucks/" + car_name[0].toLowerCase() + "/" + car_name[1].toLowerCase()
 
 					left_span.appendChild(left_link);
 

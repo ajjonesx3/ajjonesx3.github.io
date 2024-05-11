@@ -70,3 +70,12 @@ ol li {
 .left, .right {
 	word-wrap:break-word;
 }
+
+a {
+	text-decoration:none;
+}
+
+a:hover {
+	cursor:pointer;
+	color:lightblue;
+}
