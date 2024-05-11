@@ -5,7 +5,7 @@ function populate() {
 		.then((data) => {
 			let da = data.array;
 			for(let i=0;i<da.length;i++){
-				let cur_list = da[i][0];
+				var cur_list = da[i][0];
 				let entries = da[i][1];
 				for(let n=0;n<entries.length;n++){
 					let cur_entry = entries[n];
