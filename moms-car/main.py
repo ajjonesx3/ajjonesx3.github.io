@@ -94,6 +94,7 @@ cars.append(car("Infinity","QX60",[15,75],75,[50,63]))
 #trunk space -  15-75
 #reliability score - 75
 #price - 50 - 63
+cars.append(car("Ford","Explorer",[16,86],82,[37,55]))
 
 cars_by_price = sorted(cars,key=lambda x: x.price.low)
 cars_by_cargo = sorted(cars,key=lambda x: x.trunk_space.high,reverse=True)
