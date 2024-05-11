@@ -14,7 +14,13 @@ function populate() {
 
 					let left_span = document.createElement('span');
 					left_span.classList.add("left");
-					left_span.textContent = left;
+					left_link = document.createElement('a');
+					left_link.textContent = left;
+
+					let car_name = left.split(" ");
+					left_link.href="https://cars.usnews.com/" + car_name[0].toLowerCase() + "/" + car_name[1].toLowerCase()
+
+					left_span.appendChild(left_link);
 
 					let right_span = document.createElement('span');
 					right_span.classList.add("right");
