@@ -39,26 +39,34 @@ main {
 	justify-content:space-between;
 }
 
-ol {
-	font-size:2em;
-	margin-left:5%;
-	width:40%;
-}
-
-ul {
-	font-size:2em;
-	list-style:none;
-	width:30%;
-	margin-right:5%;
-	text-align:right;
-}
-
-li {
-	margin:15px 0;
-	padding:15px 0;
+ol { 
+	width:100%;
+	color:white;
+	list-style-type:decimal;
 }
 
 ol li {
-	font-weight:bold;
+	margin:20px 40px;
+	font-size:2em;
+
 }
 
+.entry {
+	display:flex;
+	justify-content:space-between;
+	font-size:1em;
+}
+
+.left {
+	max-width:40%;
+}
+
+.right {
+	max-width:30%;
+	display:flex;
+	align-items:center;
+}
+
+.left, .right {
+	word-wrap:break-word;
+}

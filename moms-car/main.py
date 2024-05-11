@@ -99,5 +99,13 @@ cars_by_price = sorted(cars,key=lambda x: x.price.low)
 cars_by_cargo = sorted(cars,key=lambda x: x.trunk_space.high,reverse=True)
 cars_by_reliability = sorted(cars,key=lambda x: x.reliability,reverse=True)
 
-for car in cars_by_cargo:
-    print(car.trunk_space.to_string())
+def make_entry(left, right):
+    res = "<li><div class=\"entry\"><span class=\"left\">"
+    res += left
+    res += "</span><span class=\"right\">"
+    res += right
+    res += "</span></div></li>"
+    return res
+
+for car in cars_by_price:
+    print(make_entry(car.to_string(),car.price.to_string()))
