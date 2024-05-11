@@ -15,14 +15,14 @@ function populate() {
 					left_span.classList.add("left");
 					let right_span = document.createElement('span');
 					right_span.classList.add("right");
-					let cur_list = document.getElementById(cur_list).value;
+					let cur_ol = document.getElementById(cur_list);
 					let li = document.createElement('li');
 					let dive = document.createElement('div');
 					dive.classList.add("entry");
 					dive.appendChild(left_span);
 					dive.appendChild(right_span);
 					li.appendChild(dive);
-					cur_list.appendChild(li);
+					cur_ol.appendChild(li);
 				}
 			}
 		}).catch(err => console.error(err));
