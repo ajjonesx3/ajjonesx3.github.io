@@ -11,12 +11,17 @@ function populate() {
 					let cur_entry = entries[n];
 					let left = cur_entry[0];
 					let right = cur_entry[1];
+
 					let left_span = document.createElement('span');
 					left_span.classList.add("left");
 					left_span.textContent = left;
+					console.log(left);
+
 					let right_span = document.createElement('span');
 					right_span.classList.add("right");
 					right_span.textContent = right;
+					console.log(right);
+
 					let cur_ol = document.getElementById(cur_list);
 					let li = document.createElement('li');
 					let dive = document.createElement('div');
