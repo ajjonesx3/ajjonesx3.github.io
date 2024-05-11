@@ -14,11 +14,11 @@ function populate() {
 
 					let left_span = document.createElement('span');
 					left_span.classList.add("left");
-					console.log(left);
+					left_span.textContent = left;
 
 					let right_span = document.createElement('span');
 					right_span.classList.add("right");
-					console.log(right);
+					right_span.textContent = right;
 
 					let cur_ol = document.getElementById(cur_list);
 					let li = document.createElement('li');
