@@ -68,7 +68,7 @@ ol li {
 }
 
 .left, .right {
-	word-wrap:break-word;
+	word-wrap:normal;
 }
 
 a {
