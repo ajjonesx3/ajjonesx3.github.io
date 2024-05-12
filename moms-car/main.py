@@ -36,6 +36,15 @@ class car:
         res += "\n\tReliabiltiy: " + str(self.reliability) + "\n"
         return res
 
+    def get_val(self,xval):
+        if xval == "price":
+            return self.price.to_string()
+        if xval == "trunk_space":
+            return self.trunk_space.to_string()
+        if xval == "reliability":
+            return str(self.reliability)
+        return "ERROR"
+
         
 cars = []
 cars.append(car("Kia","Telluride",[21,87],85,[36,51]))
@@ -86,7 +95,7 @@ cars.append(car("GMC","Acadia",[23,98],84,[43,54]))
 #trunk space - 23 - 98
 #reliability score - 84
 #price - 43 - 54
-cars.append(car("Dodge","Durango",[17,85],0,[40,52]))
+cars.append(car("Dodge","Durango",[17,85],-1,[40,52]))
 #trunk space -  17 - 85
 #reliability score - 0
 #price - 40 - 52
@@ -102,25 +111,17 @@ cars_by_reliability = sorted(cars,key=lambda x: x.reliability,reverse=True)
 
 json_string = "{\n\t\"array\":\n\t\t[";
 
-entry = "[\"price_list\", ["
-for car in cars_by_price:
-    entry += "[\"" + car.to_string() + "\",\"" + car.price.to_string() + "\"],"
-entry = entry[:-1] + "]],\n"
-json_string+=entry
-
-entry = "[\"cargo_list\", ["
-for car in cars_by_cargo:
-    entry += "[\"" + car.to_string() + "\",\"" + car.trunk_space.to_string() + "\"],"
-entry = entry[:-1] + "]],\n"
-json_string+=entry
-
-entry = "[\"reliability_list\", ["
-for car in cars_by_reliability:
-    entry += "[\"" + car.to_string() + "\",\"" + str(car.reliability) + "\"],"
-entry = entry[:-1] + "]],\n"
-json_string+=entry
+def make_section(ol_id,car_list,xval):
+    entry = "[\"" + ol_id + "\", ["
+    for car in car_list:
+        entry += "[\"" + car.to_string() + "\",\"" + car.get_val(xval) + "\"],"
+    entry = entry[:-1] + "]],\n"
+    return entry
 
 
+json_string += make_section("price_list",cars_by_price,"price")
+json_string += make_section("cargo_list",cars_by_cargo,"trunk_space")
+json_string += make_section("reliabiliy_list",cars_by_reliability,"reliability")
 
 json_string = json_string[:-2] + "]\n}"
 

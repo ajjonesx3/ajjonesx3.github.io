@@ -12,6 +12,10 @@ function populate() {
 					let left = cur_entry[0];
 					let right = cur_entry[1];
 
+					if(right == "-1"){
+						right = "N/A"
+					}
+
 					let left_span = document.createElement('span');
 					left_span.classList.add("left");
 					left_link = document.createElement('a');
