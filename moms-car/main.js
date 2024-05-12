@@ -4,6 +4,7 @@ function populate() {
 		.then(res => res.json())
 		.then((data) => {
 			let da = data.array;
+			alert(window.screen.width);
 			for(let i=0;i<da.length;i++){
 				var cur_list = da[i][0];
 				var entries = da[i][1];
