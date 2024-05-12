@@ -121,7 +121,7 @@ def make_section(ol_id,car_list,xval):
 
 json_string += make_section("price_list",cars_by_price,"price")
 json_string += make_section("cargo_list",cars_by_cargo,"trunk_space")
-json_string += make_section("reliabiliy_list",cars_by_reliability,"reliability")
+json_string += make_section("reliability_list",cars_by_reliability,"reliability")
 
 json_string = json_string[:-2] + "]\n}"
 
