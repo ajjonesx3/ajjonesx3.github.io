@@ -38,7 +38,7 @@ class car:
             return str(self.reliability)
         return "ERROR"
 
-        
+print("Creating cars...")        
 cars = []
 cars.append(car("Kia","Telluride",[21,87],85,[36,51]))
 cars.append(car("Buick","Enclave",[24,97],85,[44,57]))
@@ -55,10 +55,15 @@ cars.append(car("GMC","Acadia",[23,98],84,[43,54]))
 cars.append(car("Dodge","Durango",[17,85],-1,[40,52]))
 cars.append(car("Infinity","QX60",[15,75],75,[50,63]))
 cars.append(car("Ford","Explorer",[16,86],82,[37,55]))
+print("  Done")
 
+print("Creating and sorting lists...")
 cars_by_price = sorted(cars,key=lambda x: x.price.low)
 cars_by_cargo = sorted(cars,key=lambda x: x.trunk_space.high,reverse=True)
 cars_by_reliability = sorted(cars,key=lambda x: x.reliability,reverse=True)
+print("  Done")
+
+print("Creating json string...")
 
 json_string = "{\n\t\"array\":\n\t\t[";
 
@@ -76,9 +81,16 @@ json_string += make_section("reliability_list",cars_by_reliability,"reliability"
 
 json_string = json_string[:-2] + "]\n}"
 
+print("  Done")
+
+print("Writing json file...")
+
 data_file = open("data.json","w")
 data_file.write(json_string)
 data_file.close()
+
+print("  Done")
+print("\n--- Data updated ---\n")
 
 
 
