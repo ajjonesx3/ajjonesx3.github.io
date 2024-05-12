@@ -81,10 +81,31 @@ a:hover {
 	color:lightblue;
 }
 
-@media only screen and (min-width:350dpi){
+@media only screen and (max-width:350in){
 	.section {
 		min-width:100%;
 		max-width:100%;
+		margin-left:0;
+		margin-right:0;
+		border-left:none;
+		border-right:none;
+		border-radius:0;
+		box-shadow:none;
+	}
+	a {
+		text-decoration:underline;
+	}	
+	.sec_title {
+		width:100%;
+		margin-left:0;
+		margin-right:0;
+		padding-left:0;
+		padding-right:0;
+		border-radius:0;
+		font-size:4em;
+	}
+	ol li {
+		font-size:3em;
 	}
 }
 
