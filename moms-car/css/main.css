@@ -80,3 +80,16 @@ a:hover {
 	cursor:pointer;
 	color:lightblue;
 }
+
+@media only screen and (max-width:1000px) and (min-width:350dpi){
+	.section {
+		min-width:100%;
+		max-width:100%;
+	}
+}
+
+
+
+
+
+
