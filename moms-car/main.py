@@ -37,6 +37,8 @@ class car:
             return self.trunk_space.to_string()
         if xval == "reliability":
             return str(self.reliability)
+        if xval == "total":
+            return str(self.total)
         return "ERROR"
     
     def calculate_total(self,value,car_list):
