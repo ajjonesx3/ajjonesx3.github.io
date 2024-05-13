@@ -42,14 +42,12 @@ class car:
         return "ERROR"
     
 def calculate_total(value,car_list):
-   cll = len(car_list)
-   mx = cll / 10
-   v = value * mx
-   for i in range(cll):
-       n = cll - i
-       car_list[i].total += n * v
-        
-
+    cll = len(car_list)
+    mx = cll / 10
+    v = value * mx
+    for i in range(cll):
+        n = cll - i
+        car_list[i].total += n * v
 
 print("Creating cars...")        
 cars = []
@@ -81,6 +79,7 @@ print("Calculating totals...")
 price_value = 0
 cargo_value = 0
 reliability_value = 9
+
 
 for car in cars_by_price:
     calculate_total(price_value,cars_by_price)
