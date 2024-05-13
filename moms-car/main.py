@@ -65,28 +65,34 @@ print("  Done")
 
 print("Creating json string...")
 
-json_string = "{\n\t\"array\":\n\t\t[";
+class display:
 
-def make_section(ol_id,car_list,xval):
-    entry = "[\"" + ol_id + "\", ["
-    for car in car_list:
-        entry += "[\"" + car.to_string() + "\",\"" + car.get_val(xval) + "\"],"
-    entry = entry[:-1] + "]],\n"
-    return entry
+    def __init__(self):
+        self.json_string = "{\n\t\"array\":\n\t\t[";
 
+    def add_section(self,ol_id,car_list,xval):
+        entry = "[\"" + ol_id + "\", ["
+        for car in car_list:
+            entry += "[\"" + car.to_string() + "\",\"" + car.get_val(xval) + "\"],"
+        entry = entry[:-1] + "]],\n"
+        self.json_string += entry
 
-json_string += make_section("price_list",cars_by_price,"price")
-json_string += make_section("cargo_list",cars_by_cargo,"trunk_space")
-json_string += make_section("reliability_list",cars_by_reliability,"reliability")
+    def json(self):
+        temp = self.json_string[:-2] + "]\n}"
+        return temp
 
-json_string = json_string[:-2] + "]\n}"
+page_display = display()
+page_display.add_section("price_list",cars_by_price,"price")
+page_display.add_section("cargo_list",cars_by_cargo,"trunk_space")
+page_display.add_section("reliability_list",cars_by_reliability,"reliability")
+
 
 print("  Done")
 
 print("Writing json file...")
 
 data_file = open("data.json","w")
-data_file.write(json_string)
+data_file.write(page_display.json())
 data_file.close()
 
 print("  Done")
