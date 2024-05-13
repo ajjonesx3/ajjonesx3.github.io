@@ -41,11 +41,11 @@ class car:
             return str(self.total)
         return "ERROR"
     
-    def calculate_total(self,value,car_list):
-       cll = len(car_list)
-       for i in range(cll):
-           n = cll - i
-           self.total += n * value
+def calculate_total(value,car_list):
+   cll = len(car_list)
+   for i in range(cll):
+       n = cll - i
+       car_list[i].total += n * value
         
 
 
@@ -81,13 +81,17 @@ cargo_value = 7
 reliability_value = 4
 
 for car in cars_by_price:
-    car.calculate_total(price_value,cars_by_price)
+    calculate_total(price_value,cars_by_price)
 for car in cars_by_cargo:
-    car.calculate_total(cargo_value,cars_by_cargo)
+    calculate_total(cargo_value,cars_by_cargo)
 for car in cars_by_reliability:
-    car.calculate_total(reliability_value,cars_by_reliability)
+    calculate_total(reliability_value,cars_by_reliability)
 
 cars_by_total = sorted(cars,key=lambda x: x.total,reverse=True)
+mx = cars_by_total[0].total / 100
+for car in cars_by_total:
+    car.total /= mx
+    car.total = round(car.total)
 
 print("  Done")
 
