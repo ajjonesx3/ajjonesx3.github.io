@@ -25,6 +25,7 @@ class car:
         self.trunk_space = Trunk_space(trunk_space[0],trunk_space[1])
         self.reliability = reliability 
         self.price = Price(price[0],price[1])
+        self.total = 0
 
     def to_string(self):
         return (self.make + " " + self.model)
@@ -37,6 +38,14 @@ class car:
         if xval == "reliability":
             return str(self.reliability)
         return "ERROR"
+    
+    def calculate_total(self,value,car_list):
+       cll = len(car_list)
+       for i in range(cll):
+           n = cll - i
+           self.total += n * value
+        
+
 
 print("Creating cars...")        
 cars = []
@@ -63,6 +72,23 @@ cars_by_cargo = sorted(cars,key=lambda x: x.trunk_space.high,reverse=True)
 cars_by_reliability = sorted(cars,key=lambda x: x.reliability,reverse=True)
 print("  Done")
 
+print("Calculating totals...")
+
+price_value = 3
+cargo_value = 7
+reliability_value = 4
+
+for car in cars_by_price:
+    car.calculate_total(price_value,cars_by_price)
+for car in cars_by_cargo:
+    car.calculate_total(cargo_value,cars_by_cargo)
+for car in cars_by_reliability:
+    car.calculate_total(reliability_value,cars_by_reliability)
+
+cars_by_total = sorted(cars,key=lambda x: x.total,reverse=True)
+
+print("  Done")
+
 print("Creating json string...")
 
 class display:
@@ -86,6 +112,7 @@ page_display.add_section("price_list",cars_by_price,"price")
 page_display.add_section("cargo_list",cars_by_cargo,"trunk_space")
 page_display.add_section("reliability_list",cars_by_reliability,"reliability")
 
+page_display.add_section("total_list",cars_by_total,"total")
 
 print("  Done")
 
@@ -97,8 +124,4 @@ data_file.close()
 
 print("  Done")
 print("\n--- Data updated ---\n")
-
-
-
-
 
