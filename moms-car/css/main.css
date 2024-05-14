@@ -92,6 +92,15 @@ a:hover {
 }
 
 @media only screen and (max-width:680px), (max-device-width:680px){
+	html {
+		font-size:12px;
+	}
+	header {
+		font-size:4em;
+	}
+	main {
+		margin-top:10em;
+	}
 	.section {
 		min-width:100%;
 		max-width:100%;
@@ -103,12 +112,14 @@ a:hover {
 		border-radius:0;
 		box-shadow:none;
 		margin-bottom:0;
+		font-size:2em;
 	}
 	a {
 		text-decoration:underline;
 	}	
 	.section_title_holder {
 		margin-top:0;
+		padding:0 0;
 	}
 	.sec_title {
 		width:100%;
@@ -118,6 +129,7 @@ a:hover {
 		padding-left:0;
 		padding-right:0;
 		border-radius:0;
+		padding:0 0;
 		font-size:4em;
 		border-top:0;
 		box-shadow:0 0 20px magenta;
