@@ -67,6 +67,8 @@ ol li {
 
 .left {
 	max-width:70%;
+	font-weight:bold;
+	text-shadow:0 1px purple;
 }
 
 .right {
