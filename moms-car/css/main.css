@@ -105,11 +105,14 @@ a:hover {
 		margin:none;
 		box-shadow:none;
 		font-size:2em;
-		margin:0 0;
+		margin:0 0 !important;
 	}
 	a {
 		text-decoration:underline;
 	}	
+	.sec_title {
+		margin:0 0 !important;
+	}
 	.section_title_holder {
 		margin-top:0;
 		padding:0 0;
