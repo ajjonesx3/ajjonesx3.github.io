@@ -91,7 +91,7 @@ a:hover {
 	color:lightblue;
 }
 
-@media only screen and (max-width:680px){
+@media screen and (max-width:680px){
 	.section {
 		min-width:100%;
 		max-width:100%;
