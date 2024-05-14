@@ -134,6 +134,9 @@ a:hover {
 		border-top:0;
 		box-shadow:0 0 20px magenta;
 	}
+	ol {
+		margin-left:15px;
+	}
 	ol li {
 		font-size:2.5em;
 		margin-bottom:40px;
