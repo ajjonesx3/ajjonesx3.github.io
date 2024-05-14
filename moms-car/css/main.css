@@ -102,21 +102,28 @@ a:hover {
 		border-right:none;
 		border-radius:0;
 		box-shadow:none;
+		margin-bottom:0;
 	}
 	a {
 		text-decoration:underline;
 	}	
 	.section_title_holder {
-		border-top:3px solid grey
+		margin-top:0;
 	}
 	.sec_title {
 		width:100%;
+		margin-top:0;
 		margin-left:0;
 		margin-right:0;
 		padding-left:0;
 		padding-right:0;
 		border-radius:0;
 		font-size:4em;
+		border-top:0;
+		box-shadow:0 0 20px magenta;
+	}
+	.sec_title:first-child{
+		margin-top:20px;
 	}
 	ol li {
 		font-size:1.5em;
