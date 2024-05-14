@@ -20,6 +20,14 @@ main {
 	justify-content:center;
 }
 
+.title_description {
+	font-size:1em;
+	border-bottom: 1px solid grey;
+	padding-bottom:1em;
+	padding-top:1em;
+	text-align:center;
+}
+
 .section {
 	width:65%;
 	margin:0 auto;
@@ -81,7 +89,7 @@ a:hover {
 	color:lightblue;
 }
 
-@media only screen and (max-width:500px){
+@media only screen and (max-width:680px){
 	.section {
 		min-width:100%;
 		max-width:100%;

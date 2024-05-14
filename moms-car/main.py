@@ -15,7 +15,7 @@ class Trunk_space:
         self.high = high
 
     def to_string(self):
-        return (str(self.low) + " to " + str(self.high))
+        return (str(self.low) + " | " + str(self.high))
 
 class car:
 
