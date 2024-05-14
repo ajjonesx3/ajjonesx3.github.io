@@ -1,5 +1,6 @@
+
 main {
-	padding-top:200px;
+	margin-top:20px;
 }
 
 .sec_title {
@@ -95,7 +96,7 @@ a:hover {
 
 @media only screen and (max-width:680px), (max-device-width:680px){
 	html {
-		font-size:12px;
+		font-size:24px;
 	}
 	header {
 		font-size:6em;
@@ -136,7 +137,7 @@ a:hover {
 		margin-left:15px;
 	}
 	ol li {
-		font-size:2.5em;
+		font-size:1.5em;
 		margin-bottom:40px;
 		margin-top:40px;
 	}
