@@ -76,9 +76,9 @@ print("  Done")
 
 print("Calculating totals...")
 
-price_value = 10
-cargo_value = 6
-reliability_value = 8
+price_value = 6 
+cargo_value = 7 
+reliability_value = 4 
 
 
 for car in cars_by_price:
