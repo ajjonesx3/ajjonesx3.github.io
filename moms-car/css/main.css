@@ -77,6 +77,8 @@ ol li {
 
 .left, .right {
 	word-wrap:normal;
+	display:flex;
+	justify-content:center;
 }
 
 a {
@@ -95,6 +97,7 @@ a:hover {
 		max-width:100%;
 		margin-left:0;
 		margin-right:0;
+		border-top:none;
 		border-left:none;
 		border-right:none;
 		border-radius:0;
@@ -116,6 +119,9 @@ a:hover {
 		font-size:3em;
 		margin-bottom:40px;
 		margin-top:40px;
+	}
+	.title_description {
+		border-bottom:none;
 	}
 }
 
