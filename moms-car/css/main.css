@@ -105,6 +105,7 @@ a:hover {
 		margin:none;
 		box-shadow:none;
 		font-size:2em;
+		margin:0 0;
 	}
 	a {
 		text-decoration:underline;
