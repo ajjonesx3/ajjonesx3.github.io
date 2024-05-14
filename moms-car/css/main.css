@@ -78,7 +78,7 @@ ol li {
 .left, .right {
 	word-wrap:normal;
 	display:flex;
-	justify-content:center;
+	align-items:center;
 }
 
 a {
@@ -106,6 +106,9 @@ a:hover {
 	a {
 		text-decoration:underline;
 	}	
+	.section_title_holder {
+		border-top:3px solid grey
+	}
 	.sec_title {
 		width:100%;
 		margin-left:0;
