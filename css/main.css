@@ -40,17 +40,6 @@ header h1 {
 	text-align:center;
 }
 
-.button:hover {
-	background-color:#fad16b !important;
-	padding:12px 22px !important;
-	margin:8px !important;
-}
-
-.button h3 {
-	margin:0 0;
-	font-weight:1000;
-	font-size:1.2em;
-}
 
 @media only screen and (max-device-width:680px){
 	#links {
@@ -77,6 +66,14 @@ header h1 {
 	}
 	#links .button:last-child {
 		margin-bottom:.2em;
+	}
+}
+
+@media only screen and (min-device:width:681px){
+	.button:hover {
+		background-color:#fad16b !important;
+		padding:12px 22px !important;
+		margin:8px !important;
 	}
 }
 
