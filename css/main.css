@@ -37,6 +37,7 @@ header h1 {
 	margin:10px;
 	transition: all 200ms;
 	box-shadow:0 2px black;
+	text-align:center;
 }
 
 .button:hover {
@@ -54,11 +55,14 @@ header h1 {
 @media only screen and (max-device-width:680px){
 	#links {
 		flex-direction:column;
+		background-color:#161f33;
 	}
 	#links .button {
 		min-width:100%;
 		padding:10px 0;
-		font-size:2em;
+		font-size:4em;
+		margin-left:0;
+		margin-right:0;
 	}
 }
 
