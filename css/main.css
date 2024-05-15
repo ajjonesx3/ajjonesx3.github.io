@@ -61,7 +61,8 @@ header h1 {
 		font-size:8em;
 	}
 	#links {
-		margin:0 0;
+		width:90%;
+		margin:0 auto;
 	}
 	#links .button {
 		min-width:100%;
