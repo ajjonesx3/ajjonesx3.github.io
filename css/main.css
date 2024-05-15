@@ -60,6 +60,9 @@ header h1 {
 	header h1 {
 		font-size:8em;
 	}
+	#links {
+		margin:0 0;
+	}
 	#links .button {
 		min-width:100%;
 		padding:.5em 0;
@@ -68,6 +71,7 @@ header h1 {
 		margin-right:0;
 		margin-bottom:2em;
 		border:.2em solid black;
+		border-radius:.3em;
 		box-shadow:0 .2em black;
 	}
 	#links .button:last-child {
