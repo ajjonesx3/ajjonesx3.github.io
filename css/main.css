@@ -62,7 +62,7 @@ header h1 {
 	}
 	#links {
 		width:90%;
-		margin:0 auto;
+		margin:1em auto 0;
 	}
 	#links .button {
 		min-width:100%;
@@ -70,9 +70,9 @@ header h1 {
 		font-size:4em;
 		margin-left:0;
 		margin-right:0;
-		margin-bottom:2em;
+		margin-bottom:1em;
 		border:.2em solid black;
-		border-radius:.3em;
+		border-radius:.7em;
 		box-shadow:0 .2em black;
 	}
 	#links .button:last-child {
