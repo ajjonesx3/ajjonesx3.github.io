@@ -67,6 +67,9 @@ header h1 {
 	#links .button:last-child {
 		margin-bottom:.2em;
 	}
+	.button:hover {
+		background-color:#fad16b !important;
+	}
 }
 
 @media only screen and (min-device:width:681px){
