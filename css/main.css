@@ -33,11 +33,15 @@ header h1 {
 	text-decoration:none;
 	border:3px solid black;
 	border-radius:10px;
-	padding:10px 20px;
+	padding:12px 20px;
 	margin:10px;
 	transition: all 200ms;
 	box-shadow:0 2px black;
 	text-align:center;
+}
+
+.button h3 {
+	margin:0 0;
 }
 
 
@@ -72,10 +76,10 @@ header h1 {
 	}
 }
 
-@media only screen and (min-device:width:681px){
+@media only screen and (min-device-width:681px){
 	.button:hover {
 		background-color:#fad16b !important;
-		padding:12px 22px !important;
+		padding:14px 22px !important;
 		margin:8px !important;
 	}
 }
