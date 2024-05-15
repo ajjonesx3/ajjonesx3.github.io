@@ -66,11 +66,12 @@ header h1 {
 		font-size:4em;
 		margin-left:0;
 		margin-right:0;
-		margin-bottom:15px;
+		margin-bottom:2em;
 		border:3px solid black;
+		box-shadow:0 .5em black;
 	}
 	#links .button:last-child {
-		margin-bottom:5px;
+		margin-bottom:.5em;
 	}
 }
 
