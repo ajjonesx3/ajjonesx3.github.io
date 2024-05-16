@@ -1,10 +1,2 @@
 
-change car structure to have a dictionary for its values
-	
-	["price":"42k",
-	"cargo":39]
-
-change structure of section to just say "price" and it creates all the elements itself
-
-
 seperate main.css into multiple 

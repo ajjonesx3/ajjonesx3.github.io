@@ -2,12 +2,13 @@
 class section:
 
     def __init__(self,cars,xval):
+        self.name = xval
         
         rev = True
         if xval=="price":
             rev = False
 
-        self.car_list = sorted(cars,key=lambda x: x.data[xval].sort_variable, reverse=rev) 
+        self.car_list = sorted(cars,key=lambda x: x.data[xval].sort_variable, reverse=rev)
 
 
 class display:
