@@ -42,7 +42,7 @@ print("  Done")
 
 print("Writing json file...")
 
-data_file = open("../data/data.json","w")
+data_file = open("./dev/moms-car/data/data.json","w")
 data_file.write(page_display.json())
 data_file.close()
 

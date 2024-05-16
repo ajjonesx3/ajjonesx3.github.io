@@ -1,5 +1,6 @@
 #!/bin/bash
 
+python3 dev/moms-car/scripts/main.py
 rm -rf backup
 mkdir backup
 mv release/* backup
