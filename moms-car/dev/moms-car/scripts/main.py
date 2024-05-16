@@ -1,45 +1,5 @@
-
-class Price:
-
-    def __init__(self,low,high):
-        self.low = low
-        self.high = high
-
-    def to_string(self):
-        return ("$" + str(self.low) + "k to $" + str(self.high) + "k")
-
-class Trunk_space:
-
-    def __init__(self,low,high):
-        self.low = low
-        self.high = high
-
-    def to_string(self):
-        return (str(self.low) + " | " + str(self.high))
-
-class car:
-
-    def __init__(self,make,model,trunk_space,reliability,price):
-        self.make = make
-        self.model = model
-        self.trunk_space = Trunk_space(trunk_space[0],trunk_space[1])
-        self.reliability = reliability 
-        self.price = Price(price[0],price[1])
-        self.total = 0
-
-    def to_string(self):
-        return (self.make + " " + self.model)
-
-    def get_val(self,xval):
-        if xval == "price":
-            return self.price.to_string()
-        if xval == "trunk_space":
-            return self.trunk_space.to_string()
-        if xval == "reliability":
-            return str(self.reliability)
-        if xval == "total":
-            return str(self.total)
-        return "ERROR"
+from car import Price, Trunk_space, car, calculate_total
+from section import section, display
     
 def calculate_total(value,car_list):
     cll = len(car_list)
@@ -98,22 +58,6 @@ print("  Done")
 
 print("Creating json string...")
 
-class display:
-
-    def __init__(self):
-        self.json_string = "{\n\t\"array\":\n\t\t[";
-
-    def add_section(self,ol_id,car_list,xval):
-        entry = "[\"" + ol_id + "\", ["
-        for car in car_list:
-            entry += "[\"" + car.to_string() + "\",\"" + car.get_val(xval) + "\"],"
-        entry = entry[:-1] + "]],\n"
-        self.json_string += entry
-
-    def json(self):
-        temp = self.json_string[:-2] + "]\n}"
-        return temp
-
 page_display = display()
 page_display.add_section("price_list",cars_by_price,"price")
 page_display.add_section("cargo_list",cars_by_cargo,"trunk_space")
@@ -125,7 +69,7 @@ print("  Done")
 
 print("Writing json file...")
 
-data_file = open("data.json","w")
+data_file = open("data/data.json","w")
 data_file.write(page_display.json())
 data_file.close()
 
