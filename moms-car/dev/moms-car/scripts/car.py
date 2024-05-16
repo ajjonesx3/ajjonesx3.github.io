@@ -57,4 +57,4 @@ class car:
         self.data["total"] = Total() 
 
     def to_string(self):
-        return (self.data["model"] + " " + self.data["make"])
+        return (self.data["make"] + " " + self.data["model"])

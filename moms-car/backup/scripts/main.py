@@ -1,5 +1,6 @@
 from car import Price, Cargo, car
 from section import section, display
+from total import calculate_total, make_readable
     
 
 print("Creating cars...")        
@@ -30,6 +31,13 @@ page_display.add_section("cargo")
 page_display.add_section("reliability")
 
 
+print("  Calculating totals...")
+normalized = calculate_total(cars,page_display)
+make_readable(cars,normalized)
+
+page_display.add_section("total")
+
+print("    Done")
 print("  Done")
 
 print("Writing json file...")
