@@ -3,18 +3,32 @@ class Price:
     def __init__(self,low,high):
         self.low = low
         self.high = high
+        self.sort_variable = low
     
     def to_string(self):
         return ("$" + str(self.low) + "k to $" + str(self.high) + "k")
+        return self.low
 
 class Cargo:
 
     def __init__(self,low,high):
         self.low = low
         self.high = high
+        self.sort_variable = high;
     
     def to_string(self):
         return (str(self.low) + " | " + str(self.high))
+
+
+class Reliability:
+
+    def __init__(self,val):
+        self.val = val
+        self.sort_variable = val;
+
+    def to_string(self):
+        return str(self.val)
+
 
 class car:
 
@@ -24,18 +38,9 @@ class car:
         self.data["make"] = make
         self.data["model"] = model
         self.data["cargo"] = Cargo(cargo[0],cargo[1])
-        self.data["reliability"] = reliability
+        self.data["reliability"] = Reliability(reliability)
         self.data["price"] = Price(price[0],price[1])
-        self.data["total"] = 0
 
     def to_string(self):
         return (self.data["model"] + " " + self.data["make"])
-
-def calculate_total(value,car_list):
-    cll = len(car_list)
-    mx = cll / 10
-    v = value * mx
-    for i in range(cll):
-        n = cll -i
-        car_list[i].total += n * v
 

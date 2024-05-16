@@ -1,22 +1,31 @@
 
 class section:
 
-    def __init__(self,car_list):
-        self.car_list = car_list
+    def __init__(self,cars,xval):
+        
+        rev = True
+        if xval=="price":
+            rev = False
+
+        self.car_list = sorted(cars,key=lambda x: x.data[xval].sort_variable, reverse=rev) 
 
 
 class display:
 
-    def __init__(self):
+    def __init__(self,cars):
         self.json_string = "{\n\t\"array\":\n\t\t[";
+        self.cars = cars
+        self.sections = []
 
-    def add_section(self,car_list,xval):
+    def add_section(self,xval):
 
-        ol_id = xval = "_list"
+        ol_id = xval +  "_list"
+        cur_section = section(self.cars,xval)
+        self.sections.append(cur_section)
 
         entry = "[\"" + ol_id + "\", ["
-        for car in car_list:
-            entry += "[\"" + car.to_string() + "\",\"" + car.data[xval] + "\"],"
+        for car in cur_section.car_list:
+            entry += "[\"" + car.to_string() + "\",\"" + car.data[xval].to_string() + "\"],"
         entry = entry[:-1] + "]],\n"
         self.json_string += entry
 
