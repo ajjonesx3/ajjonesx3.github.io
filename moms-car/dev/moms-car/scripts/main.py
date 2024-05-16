@@ -1,13 +1,6 @@
 from car import Price, Trunk_space, car, calculate_total
 from section import section, display
     
-def calculate_total(value,car_list):
-    cll = len(car_list)
-    mx = cll / 10
-    v = value * mx
-    for i in range(cll):
-        n = cll - i
-        car_list[i].total += n * v
 
 print("Creating cars...")        
 cars = []
@@ -30,7 +23,7 @@ print("  Done")
 
 print("Creating and sorting lists...")
 cars_by_price = sorted(cars,key=lambda x: x.price.low)
-cars_by_cargo = sorted(cars,key=lambda x: x.trunk_space.high,reverse=True)
+cars_by_cargo = sorted(cars,key=lambda x: x.cargo.high,reverse=True)
 cars_by_reliability = sorted(cars,key=lambda x: x.reliability,reverse=True)
 print("  Done")
 
@@ -59,9 +52,9 @@ print("  Done")
 print("Creating json string...")
 
 page_display = display()
-page_display.add_section("price_list",cars_by_price,"price")
-page_display.add_section("cargo_list",cars_by_cargo,"trunk_space")
-page_display.add_section("reliability_list",cars_by_reliability,"reliability")
+page_display.add_section(cars_by_price,"price")
+page_display.add_section(cars_by_cargo,"cargo")
+page_display.add_section(cars_by_reliability,"reliability")
 
 page_display.add_section("total_list",cars_by_total,"total")
 
